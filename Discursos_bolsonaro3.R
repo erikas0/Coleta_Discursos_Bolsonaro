@@ -30,7 +30,7 @@ for(j in 0:15){
   }
   discursos_temp <- matrix("aqui",nrow= length(x), ncol= 3) %>% 
     as_tibble()
-  print(paste('p·gina: ',j+1,sep = ""))
+  print(paste('p√°gina: ',j+1,sep = ""))
   for(i in 1:length(x)){
     acessar <- url_discursos %>%
       GET() %>% 
@@ -78,7 +78,9 @@ names(discursos) = c('DataHora','Titulo','Texto')
 discursos$V4 = NULL
 #export(discursos, file = "discursos.txt")
 library(xlsx)
-write.xlsx(discursos, file = "C:/Users/erika/OneDrive/Documentos/Faculdade/TCC/Discursos_14052021.xlsx")
+#inserir caminho aonde deseja salvar o arquivo xlsx
+caminho = "C:\"
+write.xlsx(discursos, file = caminho)
 
 #organizou a matrix com os textos
 discursos <- discursos %>% 
