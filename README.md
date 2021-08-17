@@ -1,0 +1,1 @@
+# Coleta_Discursos_Bolsonaro
